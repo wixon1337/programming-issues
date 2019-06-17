@@ -113,10 +113,19 @@ let s = 'Géza, kék az ég.';
 
 const cezar = (str, int) => {
   for (let i = 0; i < str.length; i++) {
-    // console.log(str.charCodeAt(i));
-    process.stdout.write(String.fromCharCode(str.charCodeAt(i) + int));
+    if (str.charCodeAt(i + int) > 122) {
+      console.log('nagyobb');
+    } else {
+      process.stdout.write(String.fromCharCode(str.charCodeAt(i) + int));
+    }
   }
 };
 
-let s2 = 'abcd';
+let s2 = 'abcdz';
 cezar(s2, 1);
+
+let z = 'z';
+let a = 'a';
+console.log();
+console.log(z.charCodeAt(0));
+console.log(a.charCodeAt(0));
