@@ -1,0 +1,9 @@
+1. Hozz létre egy új mappát tetszőleges névvel.
+2. Másold be az új mappába a data.csv file-t.
+3. A data.csv file-ra állits be teljes jogosultságkört az aktuális usernek,
+    a csoport számára irást és olvasást, mig a többiek számára simán csak olvasható legyen.
+4. Irasd ki a data.csv file tartalmát egy új userlist.csv nevű fileba.
+5. Keress ki minden USER role-al rendelkező embert és irasd ki a soraikat egy users.csv nevű fileba.
+6. Keress ki minden bear.com-ra végződő email cimmel rendelkező embert és irasd ki a az aktuális sort is.
+7. Rendezd név alapján sorrendbe a felhasználókat.
+8. Keresd ki a sorokat ahol két magánhangzó van egymás mellett.
