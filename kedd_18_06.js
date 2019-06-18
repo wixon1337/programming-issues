@@ -95,7 +95,7 @@ fill2d(tomb);
 // console.log(tomb);
 let table = require('table');
 let out = table.table(tomb);
-console.log(out);
+// console.log(out);
 
 const contains = (element, arr) => {
   for (let i = 0; i < arr.length; i++) {
@@ -108,4 +108,71 @@ const contains = (element, arr) => {
   return false;
 };
 
-console.log(contains(13, tomb));
+// console.log(contains(13, tomb));
+
+/* const smallestDifference = (arr1, arr2) => {
+  let diff = Math.abs(arr1[0] - arr2[0]);
+  let arr3 = [];
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if ((Math.abs(arr1[i] - arr2[j])) < diff) {
+        diff = Math.abs(arr1[i] - arr2[j]);
+        arr3 = [ arr1[i], arr2[j] ];
+      }
+    }
+  }
+  console.log(Math.abs(diff));
+  return arr3;
+};
+
+let tomb1 = [5, 3, 2, 10];
+let tomb2 = [12, 8, 14, 19];
+console.log(smallestDifference(tomb1, tomb2)); */
+
+/* const permuatation = (arr) => {
+    let arr2 = [];
+    for (let i = 0; i< 6; i++){
+        if (arr)
+    }
+};
+
+const permet = (n) => {
+
+    n*permet(n-1);
+};
+
+let tomb3 = [1, 2, 3];
+console.log(permuatation(tomb3)); */
+
+const stepSum = (arr) => {
+  console.log(arr);
+  if (arr.length === 2) {
+    return [arr[0] + arr[1]];
+  }
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] += arr[i + 1];
+  }
+  arr.pop();
+  return stepSum(arr);
+};
+
+let tomb5 = [1, 3, 2, 1];
+// console.log(stepSum(tomb5));
+
+const stepSum1 = (arr) => {
+  if (arr.length === 1) {
+  }
+  if (arr.length === 2) {
+    arr = ([(arr[0] + arr[1])]);
+  } else {
+    for (let i = 0; i < arr.length; i++) {
+      arr[i] += arr[i + 1];
+    }
+    arr.pop();
+    stepSum1(arr);
+  }
+  console.log(arr);
+};
+
+stepSum1(tomb5);
+// console.log(stepSum1(tomb5));
