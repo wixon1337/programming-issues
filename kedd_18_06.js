@@ -174,5 +174,7 @@ const stepSum1 = (arr) => {
   console.log(arr);
 };
 
-stepSum1(tomb5);
+// stepSum1(tomb5);
 // console.log(stepSum1(tomb5));
+
+// csak git próba
