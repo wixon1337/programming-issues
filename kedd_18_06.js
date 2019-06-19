@@ -144,6 +144,8 @@ const permet = (n) => {
 let tomb3 = [1, 2, 3];
 console.log(permuatation(tomb3)); */
 
+let tomb5 = [1, 3, 2, 1];
+
 const stepSum = (arr) => {
   console.log(arr);
   if (arr.length === 2) {
@@ -156,25 +158,20 @@ const stepSum = (arr) => {
   return stepSum(arr);
 };
 
-let tomb5 = [1, 3, 2, 1];
 // console.log(stepSum(tomb5));
 
 const stepSum1 = (arr) => {
-  if (arr.length === 1) {
-  }
   if (arr.length === 2) {
     arr = ([(arr[0] + arr[1])]);
-  } else {
-    for (let i = 0; i < arr.length; i++) {
-      arr[i] += arr[i + 1];
+  }
+  if (arr.length > 2) {
+    let tomb = [];
+    for (let i = 0; i < arr.length - 1; i++) {
+      tomb.push(arr[i] + arr[i + 1]);
     }
-    arr.pop();
-    stepSum1(arr);
+    stepSum1(tomb);
   }
   console.log(arr);
 };
 
-// stepSum1(tomb5);
-// console.log(stepSum1(tomb5));
-
-// csak git próba
+stepSum1(tomb5);
